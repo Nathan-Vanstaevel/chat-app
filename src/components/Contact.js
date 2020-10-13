@@ -1,15 +1,15 @@
 import React from 'react';
 import './Chat.css';
 
-function Contact({ Name, Avatar, Online }) {
+function Contact(props) {
   return (
     <div className='Contact'>
-      <img className='avatar' src={Avatar} alt={Name} />
+      <img className='avatar' src={props.avatar} alt={props.name} />
       <div className='name'>
-        {Name}
+        {props.name}
         <p className='status'>
           <span className='status-online'></span>
-          {Online ? 'online' : 'offline'}
+          {props.online ? 'online' : 'offline'}
         </p>
       </div>
     </div>
